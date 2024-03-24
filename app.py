@@ -1,5 +1,6 @@
 import g4f
 from g4f.api import Api
+import os
 
 list_ignored_providers = [
     # "RetryProvider",

@@ -14,17 +14,10 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build Release
-      uses: vmactions/freebsd-vm@v1
-      with:
-        usesh: true
-        release: 13.2
-        prepare: |
-          pkg install -y node wget curl git bash gawk gsed python
-          source /usr/local/etc/profile.d/paths.sh
-        run: |
-          ls 
-          pip install pyinstaller
-          pyinstaller --onefile --name=gpt4api --distpath=. app.py
+      run: |
+        ls 
+        pip install pyinstaller
+        pyinstaller --onefile --name=gpt4api --distpath=. app.py
 
     - name: Generate release tag
       id: tag

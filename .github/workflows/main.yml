@@ -19,7 +19,7 @@ jobs:
         usesh: true
         release: 13.2
         prepare: |
-          pkg install -y node wget curl git bash gawk gsed py37-pyinstaller
+          pkg install -y node wget curl git bash gawk gsed pyinstaller
         run: |
           ls 
           pyinstaller --onefile --name=gpt4api --distpath=. app.py

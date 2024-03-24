@@ -20,6 +20,7 @@ jobs:
         release: 13.2
         prepare: |
           pkg install -y node wget curl git bash gawk gsed python
+          source /usr/local/etc/profile.d/paths.sh
         run: |
           ls 
           pip install pyinstaller
